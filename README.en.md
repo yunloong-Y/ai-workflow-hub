@@ -6,6 +6,8 @@
 
 [简体中文](./README.md) · [Unified Workflow](./docs/02-unified-framework/unified-workflow.en.md) · [Closed-Loop System](./docs/03-user-system/closed-loop-system.en.md) · [Landscape](./docs/01-landscape/overview.en.md)
 
+> 🆕 ** diagrams & proof**: [Architecture Diagrams](./architecture/README.en.md) (5 Mermaid diagrams) · [End-to-End Cases](./cases/README.en.md) (OrderHub full flow + Hotfix) · [Test System & Runnable Gate Validator](./tests/README.en.md)
+
 ---
 
 ## What Is This
@@ -90,6 +92,22 @@ ai-workflow-hub/
 ├── README.md                       # Chinese entry point
 ├── README.en.md                    # English entry point
 ├── LICENSE                         # MIT
+├── .gitignore
+├── architecture/                   # NEW: Architecture diagrams (Mermaid, native on GitHub)
+│   ├── 01-system-context           # System context
+│   ├── 02-workflow-stages          # 10-stage workflow + loop
+│   ├── 03-agent-orchestration      # Agent orchestration & context passing
+│   ├── 04-traceability             # ID traceability data flow
+│   └── 05-gate-pipeline            # Quality gate pipeline (each: .md / .en.md)
+├── cases/                          # NEW: End-to-end real-world cases
+│   ├── case-01-ecommerce           # OrderHub: idea→launch→feedback loop (G0-G10)
+│   └── case-02-hotfix              # Light case: login crash hotfix (G6-G9)
+├── tests/                          # NEW: Test system & runnable gate validator
+│   ├── test-strategy               # Test strategy & pyramid
+│   ├── test-cases                  # Test cases & traceability matrix
+│   ├── coverage-report             # Coverage report example (76%→89% story)
+│   ├── gate-validation.py          # Real runnable gate validator (--demo)
+│   └── gate-validation             # Script docs & CI/hook integration (each doc: .md / .en.md)
 └── docs/
     ├── 01-landscape/
     │   └── overview.md / overview.en.md          # 5 frameworks + reference: comparison & analysis
@@ -109,10 +127,13 @@ ai-workflow-hub/
 ## 5. How to Use
 
 1. **Quick overview** → this page + [Landscape](./docs/01-landscape/overview.en.md)
-2. **Deliver a process** → [Unified Workflow](./docs/02-unified-framework/unified-workflow.en.md) + [Quality Gates](./docs/02-unified-framework/quality-gates.en.md)
-3. **Define team roles** → [Agent Roles](./docs/02-unified-framework/agent-roles.en.md)
-4. **Complete delivery assurance** → [Closed-Loop System](./docs/03-user-system/closed-loop-system.en.md)
-5. **Choose a framework** → [Quick Start & Selection](./docs/04-appendix/quick-start.en.md)
+2. **Understand architecture visually** → [Architecture Diagrams](./architecture/README.en.md) (5 Mermaid diagrams: system context, 10-stage flow, agent orchestration, ID traceability, gate pipeline)
+3. **See real cases** → [OrderHub full-flow case](./cases/case-01-ecommerce.en.md) + [Hotfix light case](./cases/case-02-hotfix.en.md)
+4. **See tests & gates** → [Test System](./tests/README.en.md), run `python3 tests/gate-validation.py --demo` to see the validator in action
+5. **Deliver a process** → [Unified Workflow](./docs/02-unified-framework/unified-workflow.en.md) + [Quality Gates](./docs/02-unified-framework/quality-gates.en.md)
+6. **Define team roles** → [Agent Roles](./docs/02-unified-framework/agent-roles.en.md)
+7. **Complete delivery assurance** → [Closed-Loop System](./docs/03-user-system/closed-loop-system.en.md)
+8. **Choose a framework** → [Quick Start & Selection](./docs/04-appendix/quick-start.en.md)
 
 ---
 

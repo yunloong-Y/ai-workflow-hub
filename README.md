@@ -6,6 +6,8 @@
 
 [English](./README.en.md) · [统一工作流框架](./docs/02-unified-framework/unified-workflow.md) · [闭环落地体系](./docs/03-user-system/closed-loop-system.md) · [全景对比](./docs/01-landscape/overview.md)
 
+> 🆕 **有图有真相**：[架构设计图集](./architecture/README.md)（5 张 Mermaid 架构图）· [端到端实战案例](./cases/README.md)（OrderHub 全流程 + Hotfix）· [测试体系与可运行门禁校验器](./tests/README.md)
+
 ---
 
 ## 这是什么
@@ -90,6 +92,22 @@ ai-workflow-hub/
 ├── README.md                       # 中文主入口（本文件）
 ├── README.en.md                    # 英文主入口
 ├── LICENSE                         # MIT
+├── .gitignore
+├── architecture/                   # 🆕 架构设计图集（Mermaid，GitHub 原生渲染）
+│   ├── 01-system-context           # 系统上下文架构
+│   ├── 02-workflow-stages          # 10 阶段工作流 + 闭环
+│   ├── 03-agent-orchestration      # Agent 编排时序与上下文传递
+│   ├── 04-traceability             # ID 溯源数据流
+│   └── 05-gate-pipeline            # 质量门禁流水线（每图 .md / .en.md）
+├── cases/                          # 🆕 端到端实战案例
+│   ├── case-01-ecommerce           # OrderHub：想法→上线→反馈闭环（贯穿 G0-G10）
+│   └── case-02-hotfix              # 轻量案例：登录崩溃 Bug 紧急修复（G6-G9）
+├── tests/                          # 🆕 测试体系与可运行门禁校验器
+│   ├── test-strategy               # 测试策略与金字塔
+│   ├── test-cases                  # 测试用例与追踪矩阵
+│   ├── coverage-report             # 覆盖率报告样例（76%→89% 故事）
+│   ├── gate-validation.py          # 真实可运行的门禁校验脚本（--demo）
+│   └── gate-validation             # 脚本说明与 CI/hook 集成（每文档 .md / .en.md）
 └── docs/
     ├── 01-landscape/
     │   └── overview.md / overview.en.md          # 5 大框架 + 参考项目全景对比与逐项解析
@@ -109,10 +127,13 @@ ai-workflow-hub/
 ## 五、如何使用
 
 1. **想快速了解全景** → 读本页 + [全景对比](./docs/01-landscape/overview.md)
-2. **想落地一套流程** → 读 [统一工作流框架](./docs/02-unified-framework/unified-workflow.md) 与 [质量门禁](./docs/02-unified-framework/quality-gates.md)
-3. **想定义团队角色** → 读 [角色 Agent](./docs/02-unified-framework/agent-roles.md)
-4. **想补齐落地保障** → 读 [闭环落地体系](./docs/03-user-system/closed-loop-system.md)
-5. **想知道选哪个框架** → 读 [快速上手与选型](./docs/04-appendix/quick-start.md)
+2. **想看图理解架构** → 读 [架构设计图集](./architecture/README.md)（5 张 Mermaid 图，含系统上下文、10 阶段流程、Agent 编排、ID 溯源、门禁流水线）
+3. **想看真实案例** → 读 [OrderHub 全流程案例](./cases/case-01-ecommerce.md) + [Hotfix 轻量案例](./cases/case-02-hotfix.md)
+4. **想看测试与门禁** → 读 [测试体系](./tests/README.md)，运行 `python3 tests/gate-validation.py --demo` 看门禁校验效果
+5. **想落地一套流程** → 读 [统一工作流框架](./docs/02-unified-framework/unified-workflow.md) 与 [质量门禁](./docs/02-unified-framework/quality-gates.md)
+6. **想定义团队角色** → 读 [角色 Agent](./docs/02-unified-framework/agent-roles.md)
+7. **想补齐落地保障** → 读 [闭环落地体系](./docs/03-user-system/closed-loop-system.md)
+8. **想知道选哪个框架** → 读 [快速上手与选型](./docs/04-appendix/quick-start.md)
 
 ---
 

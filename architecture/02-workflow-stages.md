@@ -8,6 +8,14 @@
 
 ## 2.1 主流程图（完整 10 阶段 + 闭环）
 
+<!-- IMG-EMBED -->
+**图 1 · flowchart**
+
+![图 1 · flowchart](../assets/architecture-02-workflow-stages--1.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart TD
     START([想法 / 变更请求]) --> G0["G0 治理基线<br/>宪法·角色·门禁·工具链"]
@@ -37,6 +45,8 @@ flowchart TD
     style LIGHT fill:#F1EFE8,stroke:#888780
 ```
 
+</details>
+
 **读图要点：**
 - **三个出口**：`kill`（想法评估阶段带理由停止）、`DONE`（闭环完成）、修正回环。
 - **门禁卡点**：G1（`go` 决策）、G8（覆盖率+Converged）是关键判定门，未通过会回退修正。
@@ -46,6 +56,14 @@ flowchart TD
 ---
 
 ## 2.2 三阶段视图（规划域 / 交付域 / 反馈域）
+
+<!-- IMG-EMBED -->
+**图 2 · flowchart**
+
+![图 2 · flowchart](../assets/architecture-02-workflow-stages--2.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
 
 ```mermaid
 flowchart LR
@@ -66,6 +84,8 @@ flowchart LR
     style BUILD fill:#E6F1FB,stroke:#185FA5
     style FEED fill:#E1F5EE,stroke:#0F6E56
 ```
+
+</details>
 
 > 对应 BMAD 的 `Clarify → Plan → Build → Learn` 交付循环，本体系把它细化为可落地的 10 个带门禁的阶段。
 

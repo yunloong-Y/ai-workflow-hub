@@ -24,6 +24,14 @@
 
 ## 端到端全景（Mermaid 时序图）
 
+<!-- IMG-EMBED -->
+**图 1 · sequenceDiagram**
+
+![图 1 · sequenceDiagram](../assets/cases-case-01-ecommerce--1.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 sequenceDiagram
     autonumber
@@ -58,6 +66,8 @@ sequenceDiagram
     PM->>Sys: G10 反馈三类路由 + 健康度仪表板
     Sys-->>PM: 回写 G3 → REQ-007 进入下一轮
 ```
+
+</details>
 
 ---
 
@@ -210,6 +220,14 @@ Feature: 超时自动关闭
 
 ### 架构图（Mermaid）
 
+<!-- IMG-EMBED -->
+**图 2 · flowchart**
+
+![图 2 · flowchart](../assets/cases-case-01-ecommerce--2.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart LR
     UI[React 前端] --> GW[API Gateway]
@@ -226,6 +244,8 @@ flowchart LR
     K --> EV[超时关闭消费者]
     EV --> OS
 ```
+
+</details>
 
 ### ADR-001 · 分布式事务方案
 
@@ -283,6 +303,14 @@ Consequences: + 事务可靠；+ 读性能提升；- 引入缓存一致性问题
 
 ### 需求 ID → 任务 ID 映射与依赖（Mermaid）
 
+<!-- IMG-EMBED -->
+**图 3 · flowchart**
+
+![图 3 · flowchart](../assets/cases-case-01-ecommerce--3.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart TD
     REQ001[REQ-001 创建订单] --> TASK001[TASK-001 状态机]
@@ -299,6 +327,8 @@ flowchart TD
     TASK002 --> TASK010
     TASK010 --> TASK011[TASK-011~014 可观测/部署]
 ```
+
+</details>
 
 > **Gate 5 结论：PASS** — 14 个 Task 覆盖全部 6 条需求的所有验收标准（覆盖率 100%），依赖清晰无环，ID 可追溯。
 

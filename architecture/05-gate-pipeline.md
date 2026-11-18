@@ -8,6 +8,14 @@
 
 ## 5.1 门禁流水线图（含强制方式标注）
 
+<!-- IMG-EMBED -->
+**图 1 · flowchart**
+
+![图 1 · flowchart](../assets/architecture-05-gate-pipeline--1.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart LR
     G0["G0<br/>治理基线"]:::manual --> G1["G1<br/>想法评估"]:::manual
@@ -31,6 +39,8 @@ flowchart LR
     classDef infra fill:#F1EFE8,stroke:#888780
 ```
 
+</details>
+
 **强制方式图例：**
 - 🔵 **人工审批**（manual）：需要人判断和签字（G0/G1/G2/G4/G7/G10）。
 - 🟡 **清单/校验**（check）：清单检查 + ID 校验（G3/G5）。
@@ -39,6 +49,14 @@ flowchart LR
 ---
 
 ## 5.2 机器强制门禁内部流程（以 Gate 8 为例）
+
+<!-- IMG-EMBED -->
+**图 2 · flowchart**
+
+![图 2 · flowchart](../assets/architecture-05-gate-pipeline--2.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
 
 ```mermaid
 flowchart TD
@@ -62,11 +80,21 @@ flowchart TD
     style PASS fill:#E1F5EE,stroke:#0F6E56
 ```
 
+</details>
+
 > **核心警示（来自 Agentic OS）**：rules 文件只是 Agent 可以忽略的提示；真正生效的门禁必须是机器强制的——凭证扫描、覆盖率、测试指纹、阶段证据都要接进 git hook 与 CI。
 
 ---
 
 ## 5.3 门禁状态机
+
+<!-- IMG-EMBED -->
+**图 3 · stateDiagram-v2**
+
+![图 3 · stateDiagram-v2](../assets/architecture-05-gate-pipeline--3.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
 
 ```mermaid
 stateDiagram-v2
@@ -81,5 +109,7 @@ stateDiagram-v2
     Passed --> [*]: 放行到下一阶段
     Passed --> Pending: G10 反馈回环（下一轮）
 ```
+
+</details>
 
 > 状态机体现了自有体系的"异常处理机制"：**超时 48 小时自动升级**，失败回退修正，通过后放行或进入下一轮闭环。

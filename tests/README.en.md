@@ -26,6 +26,14 @@ In an AI development workflow, testing is not a closing ritual — it is the cor
 
 Test layering follows the "many and fast at the bottom, few and stable at the top" pyramid. The lower the layer, the cheaper and faster; the higher, the closer to real users but slower and more brittle.
 
+<!-- IMG-EMBED -->
+**图 1 · flowchart**
+
+![图 1 · flowchart](../assets/tests-README.en--1.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart TB
     subgraph PYRAMID["Test Pyramid"]
@@ -39,6 +47,8 @@ flowchart TB
     NOTE["Bottom-up: count and speed decrease, localization cost increases<br/>The coverage gate is mostly funded by unit + integration tests"]
     L1 -.-> NOTE
 ```
+
+</details>
 
 | Layer | Subject | Share | Speed | Primary Tools | Framework Counterpart |
 |---|---|---:|---|---|---|
@@ -64,6 +74,14 @@ flowchart TB
 | `converge` report reads `Converged` | `/converge` | [test-strategy.md](./test-strategy.en.md) convergence check | Convergence report (Converged) |
 | CI runs the real test suite | CI pipeline | [gate-validation.md](./gate-validation.en.md) CI config | GitHub Actions / pre-commit |
 
+<!-- IMG-EMBED -->
+**图 2 · flowchart**
+
+![图 2 · flowchart](../assets/tests-README.en--2.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart LR
     A["G3 Spec<br/>Acceptance criteria (Gherkin)"] --> B["G6 Build<br/>TDD unit tests"]
@@ -78,6 +96,8 @@ flowchart LR
     H -- No --> I["Back to G3<br/>align with spec"]
     H -- Yes --> J["GATE 8 PASS<br/>→ G9 Ship"]
 ```
+
+</details>
 
 > **The key to machine enforcement**: the checks above are expressed as exit codes by [gate-validation.py](./gate-validation.py) (0 pass / 1 block / 2 warn), which CI consumes directly — an Agent cannot bypass the gate by saying "I promise I tested it."
 

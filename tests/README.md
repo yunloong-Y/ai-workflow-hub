@@ -26,6 +26,14 @@
 
 测试分层遵循"底层多而快、顶层少而稳"的金字塔结构。越往下成本越低、反馈越快；越往上越贴近真实用户、但越慢越脆。
 
+<!-- IMG-EMBED -->
+**图 1 · flowchart**
+
+![图 1 · flowchart](../assets/tests-README--1.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart TB
     subgraph PYRAMID["测试金字塔 · Test Pyramid"]
@@ -39,6 +47,8 @@ flowchart TB
     NOTE["自下而上：数量递减、速度递减、定位成本递增<br/>门禁覆盖率主要由底层单元 + 集成测试贡献"]
     L1 -.-> NOTE
 ```
+
+</details>
 
 | 层级 | 测试对象 | 数量占比 | 执行速度 | 主要工具 | 对应框架做法 |
 |---|---|---:|---|---|---|
@@ -64,6 +74,14 @@ flowchart TB
 | `converge` 报告为 `Converged` | `/converge` | [test-strategy.md](./test-strategy.md) 收敛验证 | 收敛报告（Converged） |
 | CI 跑的是真实测试套件 | CI 流水线 | [gate-validation.md](./gate-validation.md) CI 配置 | GitHub Actions / pre-commit |
 
+<!-- IMG-EMBED -->
+**图 2 · flowchart**
+
+![图 2 · flowchart](../assets/tests-README--2.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart LR
     A["G3 规格<br/>验收标准 (Gherkin)"] --> B["G6 实现<br/>TDD 单元测试"]
@@ -78,6 +96,8 @@ flowchart LR
     H -- 否 --> I["回到 G3<br/>对齐规格"]
     H -- 是 --> J["GATE 8 PASS<br/>→ G9 发布"]
 ```
+
+</details>
 
 > **机器强制的关键**：上述判断由 [gate-validation.py](./gate-validation.py) 以退出码表达（0 通过 / 1 阻断 / 2 警告），CI 直接消费退出码——Agent 无法用"我保证测过了"绕过门禁。
 

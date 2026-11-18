@@ -6,7 +6,13 @@
 
 [English](./README.en.md) · [统一工作流框架](./docs/02-unified-framework/unified-workflow.md) · [闭环落地体系](./docs/03-user-system/closed-loop-system.md) · [全景对比](./docs/01-landscape/overview.md)
 
-> 🆕 **有图有真相**：[架构设计图集](./architecture/README.md)（5 张 Mermaid 架构图）· [端到端实战案例](./cases/README.md)（OrderHub 全流程 + Hotfix）· [测试体系与可运行门禁校验器](./tests/README.md)
+> 🆕 **有图有真相**：[架构设计图集](./architecture/README.md)（5 张架构图）· [端到端实战案例](./cases/README.md)（OrderHub 全流程 + Hotfix）· [测试体系与可运行门禁校验器](./tests/README.md)
+
+## 一图看懂本项目
+
+![AI Workflow Hub 全景总览](./assets/overview-zh.png)
+
+> 上图从下到上分四层：**输入层**（对标 5 大主流框架）→ **融合内核**（统一 10 阶段工作流）→ **保障层**（闭环落地体系）→ **实证层**（架构图 / 案例 / 测试）。每张图都有对应的真实 PNG，打开文档即可见。
 
 ---
 
@@ -89,11 +95,18 @@ G10 反馈迭代  ──────────────→ 回到 G3（需�
 
 ```
 ai-workflow-hub/
-├── README.md                       # 中文主入口（本文件）
-├── README.en.md                    # 英文主入口
+├── README.md                       # 中文主入口（本文件，含全景总览图）
+├── README.en.md                    # 英文主入口（含全景总览图）
 ├── LICENSE                         # MIT
 ├── .gitignore
-├── architecture/                   # 🆕 架构设计图集（Mermaid，GitHub 原生渲染）
+├── assets/                         # 🆕 52 张真实 PNG 图 + manifest.json
+│   ├── overview-zh.png             # 全景总览图（中文，README 顶部）
+│   ├── overview-en.png             # 全景总览图（英文）
+│   └── <文档>-<序号>.png           # 50 张文档配图，与 Mermaid 块一一对应
+├── scripts/                        # 🆕 图片渲染与嵌入工具
+│   ├── render_images.py            # Mermaid → PNG（Kroki 在线渲染）
+│   └── embed_images.py             # PNG 嵌入 md（源码折叠保留）
+├── architecture/                   # 架构设计图集（图片直接展示 + Mermaid 源码折叠）
 │   ├── 01-system-context           # 系统上下文架构
 │   ├── 02-workflow-stages          # 10 阶段工作流 + 闭环
 │   ├── 03-agent-orchestration      # Agent 编排时序与上下文传递
@@ -127,7 +140,7 @@ ai-workflow-hub/
 ## 五、如何使用
 
 1. **想快速了解全景** → 读本页 + [全景对比](./docs/01-landscape/overview.md)
-2. **想看图理解架构** → 读 [架构设计图集](./architecture/README.md)（5 张 Mermaid 图，含系统上下文、10 阶段流程、Agent 编排、ID 溯源、门禁流水线）
+2. **想看图理解架构** → 读 [架构设计图集](./architecture/README.md)（5 组图，每图都有真实 PNG 直接展示 + 可展开的 Mermaid 源码；含系统上下文、10 阶段流程、Agent 编排、ID 溯源、门禁流水线）
 3. **想看真实案例** → 读 [OrderHub 全流程案例](./cases/case-01-ecommerce.md) + [Hotfix 轻量案例](./cases/case-02-hotfix.md)
 4. **想看测试与门禁** → 读 [测试体系](./tests/README.md)，运行 `python3 tests/gate-validation.py --demo` 看门禁校验效果
 5. **想落地一套流程** → 读 [统一工作流框架](./docs/02-unified-framework/unified-workflow.md) 与 [质量门禁](./docs/02-unified-framework/quality-gates.md)

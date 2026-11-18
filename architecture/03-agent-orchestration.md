@@ -10,6 +10,14 @@
 
 > 以"一个新功能从需求到上线"为例，展示各角色 Agent 在编排下的调用顺序与上下文流转。
 
+<!-- IMG-EMBED -->
+**图 1 · sequenceDiagram**
+
+![图 1 · sequenceDiagram](../assets/architecture-03-agent-orchestration--1.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 sequenceDiagram
     autonumber
@@ -64,6 +72,8 @@ sequenceDiagram
     O-->>H: 闭环完成报告
 ```
 
+</details>
+
 **读图要点：**
 - **编排器**（借鉴 AI-DLC 的 adaptive composer）是中枢，负责按阶段调度角色、在审批点暂停。
 - **知识库是单一事实源**：每个角色的产出都写入 KB，下个角色从 KB 读取，避免"每次对话重新解释"（BMAD 的 durable context）。
@@ -73,6 +83,14 @@ sequenceDiagram
 ---
 
 ## 3.2 上下文传递机制
+
+<!-- IMG-EMBED -->
+**图 2 · flowchart**
+
+![图 2 · flowchart](../assets/architecture-03-agent-orchestration--2.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
 
 ```mermaid
 flowchart LR
@@ -88,5 +106,7 @@ flowchart LR
 
     style KB fill:#EEEDFE,stroke:#534AB7
 ```
+
+</details>
 
 > **核心思想**：决策与证据写入一个单一事实源，各角色按需读取——这正是 BMAD "durable context" 与 Agentic OS "memory that survives handoffs" 的落地点。

@@ -10,6 +10,14 @@
 
 > This is the core of our "ID traceability visualization enhancement": ID flow arrows showing full-chain binding.
 
+<!-- IMG-EMBED -->
+**图 1 · flowchart**
+
+![图 1 · flowchart](../assets/architecture-04-traceability.en--1.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart LR
     REQ["REQ-042<br/>Requirement: batch cancel orders"] --> STORY["US-042<br/>User story"]
@@ -33,6 +41,8 @@ flowchart LR
     style FB fill:#FBEAF0,stroke:#993556
 ```
 
+</details>
+
 **How to read:**
 - Each requirement gets a unique ID (`REQ-042`), threading down through stories, tasks, code, tests, release, and feedback.
 - One requirement can fork into multiple tasks/code/tests, forming a **traceable graph**.
@@ -42,6 +52,14 @@ flowchart LR
 ---
 
 ## 4.2 Bidirectional Traceability Matrix
+
+<!-- IMG-EMBED -->
+**图 2 · flowchart**
+
+![图 2 · flowchart](../assets/architecture-04-traceability.en--2.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
 
 ```mermaid
 flowchart TB
@@ -64,6 +82,8 @@ flowchart TB
     style FORWARD fill:#E6F1FB,stroke:#185FA5
     style BACKWARD fill:#FBEAF0,stroke:#993556
 ```
+
+</details>
 
 ---
 

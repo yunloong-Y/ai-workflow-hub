@@ -10,6 +10,14 @@
 
 Agentic OS 的核心教训是：**Agent 说"我测过了"不算数，机器验过才算数**。脚本把 G8 门禁的抽象判据落为四项可计算检查，并用退出码表达结论。
 
+<!-- IMG-EMBED -->
+**图 1 · flowchart**
+
+![图 1 · flowchart](../assets/tests-gate-validation--1.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart TD
     A["Agent 完成 G6 构建"] --> B["record_test_run.py<br/>运行测试 + 记录退出码"]
@@ -29,6 +37,8 @@ flowchart TD
     Z -.-> J
     W -.-> J
 ```
+
+</details>
 
 | 设计原则 | 落地方式 |
 |---|---|

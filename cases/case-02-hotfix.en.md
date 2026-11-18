@@ -37,6 +37,14 @@
 
 ## Hotfix sequence diagram (Mermaid)
 
+<!-- IMG-EMBED -->
+**图 1 · sequenceDiagram**
+
+![图 1 · sequenceDiagram](../assets/cases-case-02-hotfix.en--1.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 sequenceDiagram
     autonumber
@@ -61,8 +69,10 @@ sequenceDiagram
     Ops->>Git: canary 5% → full, error rate to zero
     Git-->>Mon: 03:01 login success rate back to 99.98%
     PMO->>PMO: 05:47 retroactive: change ticket + AI assessment + approval archived
-    Note over Mon,PMO: 3h33m total; approval loop closed within 24h
+    Note over Mon,PMO: 3h33m total, approval loop closed within 24h
 ```
+
+</details>
 
 ---
 
@@ -220,6 +230,14 @@ $ python3 record_test_run.py --suite auth-module --gate 8
 
 ### Light-path summary
 
+<!-- IMG-EMBED -->
+**图 2 · flowchart**
+
+![图 2 · flowchart](../assets/cases-case-02-hotfix.en--2.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart LR
     A["BUG-2026-1116-001 P0 alert"] --> B["G6 Build: fix + credential scan"]
@@ -232,5 +250,7 @@ flowchart LR
     style E fill:#e6f0ff
     style G fill:#e6ffe6
 ```
+
+</details>
 
 > **Bottom line**: light does not mean loose — what's trimmed is the paperwork of "requirement/architecture/breakdown", never the four hard gates: credential scan, security review, test evidence, change approval. That is the real meaning of scale-adaptivity.

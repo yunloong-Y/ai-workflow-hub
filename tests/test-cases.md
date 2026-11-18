@@ -24,6 +24,14 @@
 
 ### ID 溯源流向（Traceability Flow）
 
+<!-- IMG-EMBED -->
+**图 1 · flowchart**
+
+![图 1 · flowchart](../assets/tests-test-cases--1.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart LR
     G3["G3 规格<br/>REQ-001..007"] --> G5["G5 任务<br/>TASK-101..105"]
@@ -36,6 +44,8 @@ flowchart LR
     E2E --> G8
     G8 --> G9["G9 发布"]
 ```
+
+</details>
 
 ---
 

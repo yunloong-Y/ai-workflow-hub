@@ -37,6 +37,14 @@
 
 ## 修复时序图（Mermaid）
 
+<!-- IMG-EMBED -->
+**图 1 · sequenceDiagram**
+
+![图 1 · sequenceDiagram](../assets/cases-case-02-hotfix--1.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 sequenceDiagram
     autonumber
@@ -63,6 +71,8 @@ sequenceDiagram
     PMO->>PMO: 05:47 事后补：变更单 + AI 评估 + 审批归档
     Note over Mon,PMO: 全程 3 小时 33 分钟，事后 24h 内完成审批闭环
 ```
+
+</details>
 
 ---
 
@@ -220,6 +230,14 @@ $ python3 record_test_run.py --suite auth-module --gate 8
 
 ### 轻量路径小结
 
+<!-- IMG-EMBED -->
+**图 2 · flowchart**
+
+![图 2 · flowchart](../assets/cases-case-02-hotfix--2.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart LR
     A["BUG-2026-1116-001 P0告警"] --> B["G6 构建: 修复+凭证扫描"]
@@ -232,5 +250,7 @@ flowchart LR
     style E fill:#e6f0ff
     style G fill:#e6ffe6
 ```
+
+</details>
 
 > **一句话总结**：轻量不等于松散——省掉的是"需求/架构/拆解"的文书工作，绝不省"凭证扫描、安全审查、测试证据、变更审批"这四道硬门禁。这就是规模自适应的真正含义。

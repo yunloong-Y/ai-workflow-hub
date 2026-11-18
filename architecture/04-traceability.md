@@ -10,6 +10,14 @@
 
 > 这是自有闭环体系的"ID 溯源可视化增强"核心：用 ID 流向箭头展示全链路绑定。
 
+<!-- IMG-EMBED -->
+**图 1 · flowchart**
+
+![图 1 · flowchart](../assets/architecture-04-traceability--1.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart LR
     REQ["REQ-042<br/>需求：支持订单批量取消"] --> STORY["US-042<br/>用户故事"]
@@ -33,6 +41,8 @@ flowchart LR
     style FB fill:#FBEAF0,stroke:#993556
 ```
 
+</details>
+
 **读图要点：**
 - 每个需求分配唯一 ID（`REQ-042`），向下贯穿到故事、任务、代码、测试、发布、反馈。
 - 一条需求可能分叉成多个任务/代码/测试，形成一张**可追溯的图**。
@@ -42,6 +52,14 @@ flowchart LR
 ---
 
 ## 4.2 双向追溯矩阵
+
+<!-- IMG-EMBED -->
+**图 2 · flowchart**
+
+![图 2 · flowchart](../assets/architecture-04-traceability--2.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
 
 ```mermaid
 flowchart TB
@@ -64,6 +82,8 @@ flowchart TB
     style FORWARD fill:#E6F1FB,stroke:#185FA5
     style BACKWARD fill:#FBEAF0,stroke:#993556
 ```
+
+</details>
 
 ---
 

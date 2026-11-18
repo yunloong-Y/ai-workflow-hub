@@ -6,7 +6,13 @@
 
 [简体中文](./README.md) · [Unified Workflow](./docs/02-unified-framework/unified-workflow.en.md) · [Closed-Loop System](./docs/03-user-system/closed-loop-system.en.md) · [Landscape](./docs/01-landscape/overview.en.md)
 
-> 🆕 ** diagrams & proof**: [Architecture Diagrams](./architecture/README.en.md) (5 Mermaid diagrams) · [End-to-End Cases](./cases/README.en.md) (OrderHub full flow + Hotfix) · [Test System & Runnable Gate Validator](./tests/README.en.md)
+> 🆕 **Diagrams & proof**: [Architecture Diagrams](./architecture/README.en.md) (5 diagrams) · [End-to-End Cases](./cases/README.en.md) (OrderHub full flow + Hotfix) · [Test System & Runnable Gate Validator](./tests/README.en.md)
+
+## At a Glance
+
+![AI Workflow Hub Overview](./assets/overview-en.png)
+
+> The figure above has four layers (top to bottom): **Input** (benchmarking 5 leading frameworks) → **Fusion Core** (unified 10-stage workflow) → **Assurance** (closed-loop delivery system) → **Evidence** (architecture diagrams / cases / tests). Every diagram has a real PNG, visible right inside the documents.
 
 ---
 
@@ -89,11 +95,18 @@ Derived from *"AI Product Full-Flow Closed-Loop Delivery System Design (Optimize
 
 ```
 ai-workflow-hub/
-├── README.md                       # Chinese entry point
-├── README.en.md                    # English entry point
+├── README.md                       # Chinese entry point (with overview figure)
+├── README.en.md                    # English entry point (with overview figure)
 ├── LICENSE                         # MIT
 ├── .gitignore
-├── architecture/                   # NEW: Architecture diagrams (Mermaid, native on GitHub)
+├── assets/                         # NEW: 52 real PNGs + manifest.json
+│   ├── overview-zh.png             # Overview figure (Chinese, atop README)
+│   ├── overview-en.png             # Overview figure (English)
+│   └── <doc>-<index>.png           # 50 doc figures, 1:1 with Mermaid blocks
+├── scripts/                        # NEW: Image render & embed tools
+│   ├── render_images.py            # Mermaid → PNG (via Kroki online)
+│   └── embed_images.py             # Embed PNGs into md (source kept folded)
+├── architecture/                   # Architecture diagrams (PNG shown inline + Mermaid source folded)
 │   ├── 01-system-context           # System context
 │   ├── 02-workflow-stages          # 10-stage workflow + loop
 │   ├── 03-agent-orchestration      # Agent orchestration & context passing
@@ -127,7 +140,7 @@ ai-workflow-hub/
 ## 5. How to Use
 
 1. **Quick overview** → this page + [Landscape](./docs/01-landscape/overview.en.md)
-2. **Understand architecture visually** → [Architecture Diagrams](./architecture/README.en.md) (5 Mermaid diagrams: system context, 10-stage flow, agent orchestration, ID traceability, gate pipeline)
+2. **Understand architecture visually** → [Architecture Diagrams](./architecture/README.en.md) (5 groups, each with a real PNG shown inline + expandable Mermaid source: system context, 10-stage flow, agent orchestration, ID traceability, gate pipeline)
 3. **See real cases** → [OrderHub full-flow case](./cases/case-01-ecommerce.en.md) + [Hotfix light case](./cases/case-02-hotfix.en.md)
 4. **See tests & gates** → [Test System](./tests/README.en.md), run `python3 tests/gate-validation.py --demo` to see the validator in action
 5. **Deliver a process** → [Unified Workflow](./docs/02-unified-framework/unified-workflow.en.md) + [Quality Gates](./docs/02-unified-framework/quality-gates.en.md)

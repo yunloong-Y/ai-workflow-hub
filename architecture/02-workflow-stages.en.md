@@ -8,6 +8,14 @@
 
 ## 2.1 Main Flow Diagram (Full 10 Stages + Loop)
 
+<!-- IMG-EMBED -->
+**图 1 · flowchart**
+
+![图 1 · flowchart](../assets/architecture-02-workflow-stages.en--1.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart TD
     START([Idea / Change request]) --> G0["G0 Governance<br/>Constitution·Roles·Gates·Toolchain"]
@@ -37,6 +45,8 @@ flowchart TD
     style LIGHT fill:#F1EFE8,stroke:#888780
 ```
 
+</details>
+
 **How to read:**
 - **Three exits**: `kill` (stop with reason at assessment), `DONE` (loop complete), and fix loop.
 - **Gate checkpoints**: G1 (`go` decision) and G8 (coverage + Converged) are key decision gates; failure triggers rollback to a prior stage.
@@ -46,6 +56,14 @@ flowchart TD
 ---
 
 ## 2.2 Three-Domain View (Planning / Delivery / Feedback)
+
+<!-- IMG-EMBED -->
+**图 2 · flowchart**
+
+![图 2 · flowchart](../assets/architecture-02-workflow-stages.en--2.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
 
 ```mermaid
 flowchart LR
@@ -66,6 +84,8 @@ flowchart LR
     style BUILD fill:#E6F1FB,stroke:#185FA5
     style FEED fill:#E1F5EE,stroke:#0F6E56
 ```
+
+</details>
 
 > Corresponding to BMAD's `Clarify → Plan → Build → Learn` delivery loop, this system refines it into 10 landable stages with gates.
 

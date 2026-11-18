@@ -1,0 +1,352 @@
+[
+  {
+    "file": "architecture/01-system-context.en.md",
+    "index": 1,
+    "type": "flowchart",
+    "image": "assets/architecture-01-system-context.en--1.png",
+    "size": 151697
+  },
+  {
+    "file": "architecture/01-system-context.md",
+    "index": 1,
+    "type": "flowchart",
+    "image": "assets/architecture-01-system-context--1.png",
+    "size": 132247
+  },
+  {
+    "file": "architecture/02-workflow-stages.en.md",
+    "index": 1,
+    "type": "flowchart",
+    "image": "assets/architecture-02-workflow-stages.en--1.png",
+    "size": 153433
+  },
+  {
+    "file": "architecture/02-workflow-stages.en.md",
+    "index": 2,
+    "type": "flowchart",
+    "image": "assets/architecture-02-workflow-stages.en--2.png",
+    "size": 45728
+  },
+  {
+    "file": "architecture/02-workflow-stages.md",
+    "index": 1,
+    "type": "flowchart",
+    "image": "assets/architecture-02-workflow-stages--1.png",
+    "size": 142123
+  },
+  {
+    "file": "architecture/02-workflow-stages.md",
+    "index": 2,
+    "type": "flowchart",
+    "image": "assets/architecture-02-workflow-stages--2.png",
+    "size": 42703
+  },
+  {
+    "file": "architecture/03-agent-orchestration.en.md",
+    "index": 1,
+    "type": "sequenceDiagram",
+    "image": "assets/architecture-03-agent-orchestration.en--1.png",
+    "size": 201029
+  },
+  {
+    "file": "architecture/03-agent-orchestration.en.md",
+    "index": 2,
+    "type": "flowchart",
+    "image": "assets/architecture-03-agent-orchestration.en--2.png",
+    "size": 62805
+  },
+  {
+    "file": "architecture/03-agent-orchestration.md",
+    "index": 1,
+    "type": "sequenceDiagram",
+    "image": "assets/architecture-03-agent-orchestration--1.png",
+    "size": 199375
+  },
+  {
+    "file": "architecture/03-agent-orchestration.md",
+    "index": 2,
+    "type": "flowchart",
+    "image": "assets/architecture-03-agent-orchestration--2.png",
+    "size": 60031
+  },
+  {
+    "file": "architecture/04-traceability.en.md",
+    "index": 1,
+    "type": "flowchart",
+    "image": "assets/architecture-04-traceability.en--1.png",
+    "size": 71057
+  },
+  {
+    "file": "architecture/04-traceability.en.md",
+    "index": 2,
+    "type": "flowchart",
+    "image": "assets/architecture-04-traceability.en--2.png",
+    "size": 53305
+  },
+  {
+    "file": "architecture/04-traceability.md",
+    "index": 1,
+    "type": "flowchart",
+    "image": "assets/architecture-04-traceability--1.png",
+    "size": 66460
+  },
+  {
+    "file": "architecture/04-traceability.md",
+    "index": 2,
+    "type": "flowchart",
+    "image": "assets/architecture-04-traceability--2.png",
+    "size": 46964
+  },
+  {
+    "file": "architecture/05-gate-pipeline.en.md",
+    "index": 1,
+    "type": "flowchart",
+    "image": "assets/architecture-05-gate-pipeline.en--1.png",
+    "size": 32095
+  },
+  {
+    "file": "architecture/05-gate-pipeline.en.md",
+    "index": 2,
+    "type": "flowchart",
+    "image": "assets/architecture-05-gate-pipeline.en--2.png",
+    "size": 109466
+  },
+  {
+    "file": "architecture/05-gate-pipeline.en.md",
+    "index": 3,
+    "type": "stateDiagram-v2",
+    "image": "assets/architecture-05-gate-pipeline.en--3.png",
+    "size": 50103
+  },
+  {
+    "file": "architecture/05-gate-pipeline.md",
+    "index": 1,
+    "type": "flowchart",
+    "image": "assets/architecture-05-gate-pipeline--1.png",
+    "size": 40555
+  },
+  {
+    "file": "architecture/05-gate-pipeline.md",
+    "index": 2,
+    "type": "flowchart",
+    "image": "assets/architecture-05-gate-pipeline--2.png",
+    "size": 107279
+  },
+  {
+    "file": "architecture/05-gate-pipeline.md",
+    "index": 3,
+    "type": "stateDiagram-v2",
+    "image": "assets/architecture-05-gate-pipeline--3.png",
+    "size": 50501
+  },
+  {
+    "file": "cases/case-01-ecommerce.en.md",
+    "index": 1,
+    "type": "sequenceDiagram",
+    "image": "assets/cases-case-01-ecommerce.en--1.png",
+    "size": 175443
+  },
+  {
+    "file": "cases/case-01-ecommerce.en.md",
+    "index": 2,
+    "type": "flowchart",
+    "image": "assets/cases-case-01-ecommerce.en--2.png",
+    "size": 62738
+  },
+  {
+    "file": "cases/case-01-ecommerce.en.md",
+    "index": 3,
+    "type": "flowchart",
+    "image": "assets/cases-case-01-ecommerce.en--3.png",
+    "size": 53800
+  },
+  {
+    "file": "cases/case-01-ecommerce.md",
+    "index": 1,
+    "type": "sequenceDiagram",
+    "image": "assets/cases-case-01-ecommerce--1.png",
+    "size": 167972
+  },
+  {
+    "file": "cases/case-01-ecommerce.md",
+    "index": 2,
+    "type": "flowchart",
+    "image": "assets/cases-case-01-ecommerce--2.png",
+    "size": 59937
+  },
+  {
+    "file": "cases/case-01-ecommerce.md",
+    "index": 3,
+    "type": "flowchart",
+    "image": "assets/cases-case-01-ecommerce--3.png",
+    "size": 50570
+  },
+  {
+    "file": "cases/case-02-hotfix.en.md",
+    "index": 1,
+    "type": "sequenceDiagram",
+    "image": "assets/cases-case-02-hotfix.en--1.png",
+    "size": 122218
+  },
+  {
+    "file": "cases/case-02-hotfix.en.md",
+    "index": 2,
+    "type": "flowchart",
+    "image": "assets/cases-case-02-hotfix.en--2.png",
+    "size": 33575
+  },
+  {
+    "file": "cases/case-02-hotfix.md",
+    "index": 1,
+    "type": "sequenceDiagram",
+    "image": "assets/cases-case-02-hotfix--1.png",
+    "size": 130299
+  },
+  {
+    "file": "cases/case-02-hotfix.md",
+    "index": 2,
+    "type": "flowchart",
+    "image": "assets/cases-case-02-hotfix--2.png",
+    "size": 27525
+  },
+  {
+    "file": "tests/README.en.md",
+    "index": 1,
+    "type": "flowchart",
+    "image": "assets/tests-README.en--1.png",
+    "size": 48794
+  },
+  {
+    "file": "tests/README.en.md",
+    "index": 2,
+    "type": "flowchart",
+    "image": "assets/tests-README.en--2.png",
+    "size": 76028
+  },
+  {
+    "file": "tests/README.md",
+    "index": 1,
+    "type": "flowchart",
+    "image": "assets/tests-README--1.png",
+    "size": 47600
+  },
+  {
+    "file": "tests/README.md",
+    "index": 2,
+    "type": "flowchart",
+    "image": "assets/tests-README--2.png",
+    "size": 68196
+  },
+  {
+    "file": "tests/coverage-report.en.md",
+    "index": 1,
+    "type": "flowchart",
+    "image": "assets/tests-coverage-report.en--1.png",
+    "size": 56993
+  },
+  {
+    "file": "tests/coverage-report.en.md",
+    "index": 2,
+    "type": "xychart-beta",
+    "image": "assets/tests-coverage-report.en--2.png",
+    "size": 15915
+  },
+  {
+    "file": "tests/coverage-report.md",
+    "index": 1,
+    "type": "flowchart",
+    "image": "assets/tests-coverage-report--1.png",
+    "size": 53862
+  },
+  {
+    "file": "tests/coverage-report.md",
+    "index": 2,
+    "type": "xychart-beta",
+    "image": "assets/tests-coverage-report--2.png",
+    "size": 16838
+  },
+  {
+    "file": "tests/gate-validation.en.md",
+    "index": 1,
+    "type": "flowchart",
+    "image": "assets/tests-gate-validation.en--1.png",
+    "size": 122356
+  },
+  {
+    "file": "tests/gate-validation.md",
+    "index": 1,
+    "type": "flowchart",
+    "image": "assets/tests-gate-validation--1.png",
+    "size": 115242
+  },
+  {
+    "file": "tests/test-cases.en.md",
+    "index": 1,
+    "type": "flowchart",
+    "image": "assets/tests-test-cases.en--1.png",
+    "size": 31079
+  },
+  {
+    "file": "tests/test-cases.md",
+    "index": 1,
+    "type": "flowchart",
+    "image": "assets/tests-test-cases--1.png",
+    "size": 27864
+  },
+  {
+    "file": "tests/test-strategy.en.md",
+    "index": 1,
+    "type": "flowchart",
+    "image": "assets/tests-test-strategy.en--1.png",
+    "size": 44627
+  },
+  {
+    "file": "tests/test-strategy.en.md",
+    "index": 2,
+    "type": "flowchart",
+    "image": "assets/tests-test-strategy.en--2.png",
+    "size": 38698
+  },
+  {
+    "file": "tests/test-strategy.en.md",
+    "index": 3,
+    "type": "flowchart",
+    "image": "assets/tests-test-strategy.en--3.png",
+    "size": 37413
+  },
+  {
+    "file": "tests/test-strategy.en.md",
+    "index": 4,
+    "type": "flowchart",
+    "image": "assets/tests-test-strategy.en--4.png",
+    "size": 39990
+  },
+  {
+    "file": "tests/test-strategy.md",
+    "index": 1,
+    "type": "flowchart",
+    "image": "assets/tests-test-strategy--1.png",
+    "size": 42910
+  },
+  {
+    "file": "tests/test-strategy.md",
+    "index": 2,
+    "type": "flowchart",
+    "image": "assets/tests-test-strategy--2.png",
+    "size": 33677
+  },
+  {
+    "file": "tests/test-strategy.md",
+    "index": 3,
+    "type": "flowchart",
+    "image": "assets/tests-test-strategy--3.png",
+    "size": 35255
+  },
+  {
+    "file": "tests/test-strategy.md",
+    "index": 4,
+    "type": "flowchart",
+    "image": "assets/tests-test-strategy--4.png",
+    "size": 38219
+  }
+]

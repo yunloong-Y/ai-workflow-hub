@@ -24,6 +24,14 @@
 
 ### Traceability Flow
 
+<!-- IMG-EMBED -->
+**图 1 · flowchart**
+
+![图 1 · flowchart](../assets/tests-test-cases.en--1.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart LR
     G3["G3 Spec<br/>REQ-001..007"] --> G5["G5 Tasks<br/>TASK-101..105"]
@@ -36,6 +44,8 @@ flowchart LR
     E2E --> G8
     G8 --> G9["G9 Ship"]
 ```
+
+</details>
 
 ---
 

@@ -26,6 +26,14 @@
 
 ## 2. Gate Verdict Rules
 
+<!-- IMG-EMBED -->
+**图 1 · flowchart**
+
+![图 1 · flowchart](../assets/tests-coverage-report.en--1.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart TD
     A["Read coverage.json<br/>parse each module"] --> B["Weight by lines.total<br/>compute overall coverage"]
@@ -37,6 +45,8 @@ flowchart TD
     G --> A
     E --> H["Raise to comfort zone ≥85% next iteration"]
 ```
+
+</details>
 
 | Verdict | Range | Exit Code | Gate Action | Scenario |
 |---|---|---:|---|---|
@@ -136,6 +146,14 @@ Target valuable gaps from the uncovered list; mark low-value code (e.g. `refund(
 | 2026-11-18 PM | `4e8d2f1` | **89.0%** | **PASS** | 5 new cases + other gate fixes |
 | Target baseline | — | ≥ 85.0% | Comfort zone | Future iterations must not fall below |
 
+<!-- IMG-EMBED -->
+**图 2 · xychart-beta**
+
+![图 2 · xychart-beta](../assets/tests-coverage-report.en--2.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 xychart-beta
     title "OrderHub Line Coverage Trend (Gate 8 threshold 80%)"
@@ -143,6 +161,8 @@ xychart-beta
     y-axis "Coverage %" 60 --> 100
     line [71.2, 74.8, 79.1, 76.4, 89.0]
 ```
+
+</details>
 
 > Trend reading: the morning of 11-18 saw coverage fall to 76.4% because the new refund module grew the denominator from 700 to 800, triggering the gate. Targeted remediation that afternoon pushed it to 89.0%, clearing the comfort zone.
 

@@ -21,6 +21,14 @@
 
 ## 2. Layering & Tooling
 
+<!-- IMG-EMBED -->
+**图 1 · flowchart**
+
+![图 1 · flowchart](../assets/tests-test-strategy.en--1.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart TB
     subgraph PYRAMID["Test Pyramid · Layering Strategy"]
@@ -34,6 +42,8 @@ flowchart TB
     V --> E --> C --> I --> U
     U --> G8["Gate 8 evidence<br/>coverage ≥80% · fingerprint · Converged"]
 ```
+
+</details>
 
 | Layer | Test Objective | Granularity | Tooling | Authored By | Commit Policy | Stability |
 |---|---|---|---|---|---|---|
@@ -61,6 +71,14 @@ flowchart TB
 
 Feature work uses mandatory TDD: write a failing acceptance test first, then the minimal implementation, then refactor — repeating the cycle. Every cycle must **bind a requirement ID** so ID traceability stays intact.
 
+<!-- IMG-EMBED -->
+**图 2 · flowchart**
+
+![图 2 · flowchart](../assets/tests-test-strategy.en--2.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart LR
     A["(1) RED<br/>Write failing test from acceptance criteria<br/>observe red (fail)"] --> B["(2) GREEN<br/>Write minimal implementation<br/>turn test green (pass)"]
@@ -68,6 +86,8 @@ flowchart LR
     C --> A
     A -. "Requirement ID binding<br/>G3 → G5 → G6" .-> D["Traceability matrix<br/>test-cases.md"]
 ```
+
+</details>
 
 | Step | Activity | Done Criterion | Stage | Artifact |
 |---|---|---|---|---|
@@ -100,6 +120,14 @@ flowchart LR
 
 ### 4.2 Gate Verdict Rules
 
+<!-- IMG-EMBED -->
+**图 3 · flowchart**
+
+![图 3 · flowchart](../assets/tests-test-strategy.en--3.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart LR
     A["Parse coverage report<br/>weight by lines.total"] --> B{"Overall line coverage ≥ 80%?"}
@@ -107,6 +135,8 @@ flowchart LR
     B -- "[80%, 85%)" --> D["WARN · exit 2<br/>pass with risk logged"]
     B -- "≥ 85%" --> E["PASS · exit 0<br/>release"]
 ```
+
+</details>
 
 | Range | Verdict | Exit Code | Action |
 |---|---|---:|---|
@@ -149,6 +179,14 @@ AI is good at rapidly scaffolding tests but tends to produce suites that look co
 
 ## 6. Shift-Left & Shift-Right
 
+<!-- IMG-EMBED -->
+**图 4 · flowchart**
+
+![图 4 · flowchart](../assets/tests-test-strategy.en--4.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart LR
     subgraph LEFT["Shift-Left · Prevent Defects"]
@@ -162,6 +200,8 @@ flowchart LR
     L3 --> R1
     R3 -. "closed loop" .-> L1
 ```
+
+</details>
 
 | Direction | Meaning | Concrete Practice | Stage | Value |
 |---|---|---|---|---|

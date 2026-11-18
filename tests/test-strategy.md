@@ -21,6 +21,14 @@
 
 ## 二、测试分层与工具选型（Layering & Tooling）
 
+<!-- IMG-EMBED -->
+**图 1 · flowchart**
+
+![图 1 · flowchart](../assets/tests-test-strategy--1.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart TB
     subgraph PYRAMID["测试金字塔 · 分层策略"]
@@ -34,6 +42,8 @@ flowchart TB
     V --> E --> C --> I --> U
     U --> G8["Gate 8 证据<br/>覆盖率 ≥80% · 指纹 · Converged"]
 ```
+
+</details>
 
 | 层级 | 测试目标 | 粒度 | 工具选型 | 谁编写 | 入库要求 | 稳定性 |
 |---|---|---|---|---|---|---|
@@ -61,6 +71,14 @@ flowchart TB
 
 功能开发采用强制 TDD：先写失败的验收测试，再写最小实现，最后重构，循环推进。每个循环都必须**绑定需求 ID**，保证 ID 溯源不断链。
 
+<!-- IMG-EMBED -->
+**图 2 · flowchart**
+
+![图 2 · flowchart](../assets/tests-test-strategy--2.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart LR
     A["① RED<br/>按验收标准写失败测试<br/>跑出红（fail）"] --> B["② GREEN<br/>写最小实现<br/>让测试变绿（pass）"]
@@ -68,6 +86,8 @@ flowchart LR
     C --> A
     A -. "需求 ID 绑定<br/>G3 → G5 → G6" .-> D["追踪矩阵<br/>test-cases.md"]
 ```
+
+</details>
 
 | 步骤 | 活动 | 完成判据 | 对应阶段 | 产出物 |
 |---|---|---|---|---|
@@ -100,6 +120,14 @@ flowchart LR
 
 ### 4.2 门禁判定规则
 
+<!-- IMG-EMBED -->
+**图 3 · flowchart**
+
+![图 3 · flowchart](../assets/tests-test-strategy--3.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart LR
     A["解析覆盖率报告<br/>按 lines.total 加权"] --> B{"整体行覆盖率 ≥ 80%?"}
@@ -107,6 +135,8 @@ flowchart LR
     B -- "[80%, 85%)" --> D["WARN · 退出码 2<br/>放行但需关注"]
     B -- "≥ 85%" --> E["PASS · 退出码 0<br/>放行"]
 ```
+
+</details>
 
 | 区间 | 判定 | 退出码 | 处理 |
 |---|---|---:|---|
@@ -149,6 +179,14 @@ AI 善于快速铺开测试用例，但倾向产生"看起来很全、实则假�
 
 ## 六、测试左移与右移（Shift-Left & Shift-Right）
 
+<!-- IMG-EMBED -->
+**图 4 · flowchart**
+
+![图 4 · flowchart](../assets/tests-test-strategy--4.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart LR
     subgraph LEFT["测试左移 Shift-Left · 预防缺陷"]
@@ -162,6 +200,8 @@ flowchart LR
     L3 --> R1
     R3 -. "闭环" .-> L1
 ```
+
+</details>
 
 | 方向 | 含义 | 具体实践 | 对应阶段 | 价值 |
 |---|---|---|---|---|

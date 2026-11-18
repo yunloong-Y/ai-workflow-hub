@@ -10,6 +10,14 @@
 
 > Using "a new feature from requirements to launch" as an example, showing the call order and context flow across roles under orchestration.
 
+<!-- IMG-EMBED -->
+**图 1 · sequenceDiagram**
+
+![图 1 · sequenceDiagram](../assets/architecture-03-agent-orchestration.en--1.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 sequenceDiagram
     autonumber
@@ -64,6 +72,8 @@ sequenceDiagram
     O-->>H: Loop-complete report
 ```
 
+</details>
+
 **How to read:**
 - The **orchestrator** (borrowing AI-DLC's adaptive composer) is the hub — dispatching roles by stage and pausing at approval points.
 - The **knowledge base is the single source of truth**: each role writes its outputs to KB, the next reads from KB — avoiding "re-explaining every chat" (BMAD's durable context).
@@ -73,6 +83,14 @@ sequenceDiagram
 ---
 
 ## 3.2 Context Passing Mechanism
+
+<!-- IMG-EMBED -->
+**图 2 · flowchart**
+
+![图 2 · flowchart](../assets/architecture-03-agent-orchestration.en--2.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
 
 ```mermaid
 flowchart LR
@@ -88,5 +106,7 @@ flowchart LR
 
     style KB fill:#EEEDFE,stroke:#534AB7
 ```
+
+</details>
 
 > **Core idea**: decisions and evidence are written to a single source of truth, read on demand by each role — the landing point of BMAD "durable context" and Agentic OS "memory that survives handoffs".

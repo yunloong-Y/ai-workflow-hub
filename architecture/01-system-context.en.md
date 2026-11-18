@@ -8,6 +8,14 @@
 
 ## 1.1 System Context Diagram
 
+<!-- IMG-EMBED -->
+**图 1 · flowchart**
+
+![图 1 · flowchart](../assets/architecture-01-system-context.en--1.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart TB
     subgraph ACTORS["External Actors"]
@@ -47,6 +55,8 @@ flowchart TB
     style ACTORS fill:#E6F1FB,stroke:#185FA5
     style TOOLS fill:#E1F5EE,stroke:#0F6E56
 ```
+
+</details>
 
 **How to read:**
 - The system core has three parts: **workflow engine** (orchestration) + **agent roles** (execution) + **gate assurance** (verification).

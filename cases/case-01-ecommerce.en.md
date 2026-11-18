@@ -24,6 +24,14 @@
 
 ## End-to-End Overview (Mermaid sequence diagram)
 
+<!-- IMG-EMBED -->
+**图 1 · sequenceDiagram**
+
+![图 1 · sequenceDiagram](../assets/cases-case-01-ecommerce.en--1.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 sequenceDiagram
     autonumber
@@ -58,6 +66,8 @@ sequenceDiagram
     PM->>Sys: G10 3-way feedback routing + Health Dashboard
     Sys-->>PM: write back to G3 → REQ-007 into next cycle
 ```
+
+</details>
 
 ---
 
@@ -210,6 +220,14 @@ Feature: Auto-close on timeout
 
 ### Architecture diagram (Mermaid)
 
+<!-- IMG-EMBED -->
+**图 2 · flowchart**
+
+![图 2 · flowchart](../assets/cases-case-01-ecommerce.en--2.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart LR
     UI[React Frontend] --> GW[API Gateway]
@@ -226,6 +244,8 @@ flowchart LR
     K --> EV[Timeout-close consumer]
     EV --> OS
 ```
+
+</details>
 
 ### ADR-001 · Distributed transaction approach
 
@@ -283,6 +303,14 @@ Consequences: + Reliable transactions; + better read performance; - cache consis
 
 ### Requirement → task mapping and dependencies (Mermaid)
 
+<!-- IMG-EMBED -->
+**图 3 · flowchart**
+
+![图 3 · flowchart](../assets/cases-case-01-ecommerce.en--3.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart TD
     REQ001[REQ-001 Create order] --> TASK001[TASK-001 state machine]
@@ -299,6 +327,8 @@ flowchart TD
     TASK002 --> TASK010
     TASK010 --> TASK011[TASK-011~014 observability/deploy]
 ```
+
+</details>
 
 > **Gate 5: PASS** — 14 tasks cover all acceptance criteria of 6 requirements (100% coverage), dependencies clear and acyclic, IDs traceable.
 

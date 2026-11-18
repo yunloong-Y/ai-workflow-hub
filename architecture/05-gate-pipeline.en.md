@@ -8,6 +8,14 @@
 
 ## 5.1 Gate Pipeline Diagram (with enforcement annotations)
 
+<!-- IMG-EMBED -->
+**图 1 · flowchart**
+
+![图 1 · flowchart](../assets/architecture-05-gate-pipeline.en--1.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart LR
     G0["G0<br/>Governance"]:::manual --> G1["G1<br/>Assessment"]:::manual
@@ -31,6 +39,8 @@ flowchart LR
     classDef infra fill:#F1EFE8,stroke:#888780
 ```
 
+</details>
+
 **Enforcement legend:**
 - 🔵 **Human approval** (manual): requires human judgment and sign-off (G0/G1/G2/G4/G7/G10).
 - 🟡 **Checklist/validation** (check): checklist + ID validation (G3/G5).
@@ -39,6 +49,14 @@ flowchart LR
 ---
 
 ## 5.2 Machine-Enforced Gate Internal Flow (Gate 8 example)
+
+<!-- IMG-EMBED -->
+**图 2 · flowchart**
+
+![图 2 · flowchart](../assets/architecture-05-gate-pipeline.en--2.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
 
 ```mermaid
 flowchart TD
@@ -62,11 +80,21 @@ flowchart TD
     style PASS fill:#E1F5EE,stroke:#0F6E56
 ```
 
+</details>
+
 > **Core warning (from Agentic OS)**: a rules file is just a prompt the agent can ignore; gates that truly work must be machine-enforced — credential scan, coverage, test fingerprint, phase evidence all wired into git hooks and CI.
 
 ---
 
 ## 5.3 Gate State Machine
+
+<!-- IMG-EMBED -->
+**图 3 · stateDiagram-v2**
+
+![图 3 · stateDiagram-v2](../assets/architecture-05-gate-pipeline.en--3.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
 
 ```mermaid
 stateDiagram-v2
@@ -81,5 +109,7 @@ stateDiagram-v2
     Passed --> [*]: release to next stage
     Passed --> Pending: G10 feedback loop (next round)
 ```
+
+</details>
 
 > The state machine embodies our "exception handling mechanism": **auto-escalate after 48 hours**, failure rolls back for fixes, passing releases or enters the next closed loop.

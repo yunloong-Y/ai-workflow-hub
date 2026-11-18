@@ -10,6 +10,14 @@
 
 The core lesson of Agentic OS: **an Agent saying "I tested it" doesn't count — the machine verifying it does**. The script reduces the abstract G8 criteria to four computable checks and expresses the verdict as an exit code.
 
+<!-- IMG-EMBED -->
+**图 1 · flowchart**
+
+![图 1 · flowchart](../assets/tests-gate-validation.en--1.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart TD
     A["Agent finishes G6 Build"] --> B["record_test_run.py<br/>run tests + record exit code"]
@@ -29,6 +37,8 @@ flowchart TD
     Z -.-> J
     W -.-> J
 ```
+
+</details>
 
 | Design Principle | Implementation |
 |---|---|

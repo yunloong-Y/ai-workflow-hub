@@ -26,6 +26,14 @@
 
 ## 二、门禁判定规则（Gate Verdict Rules）
 
+<!-- IMG-EMBED -->
+**图 1 · flowchart**
+
+![图 1 · flowchart](../assets/tests-coverage-report--1.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart TD
     A["读取 coverage.json<br/>解析每个模块"] --> B["按 lines.total 加权<br/>计算整体覆盖率"]
@@ -37,6 +45,8 @@ flowchart TD
     G --> A
     E --> H["下个迭代提升到舒适区 ≥85%"]
 ```
+
+</details>
 
 | 判定 | 区间 | 退出码 | 门禁动作 | 对应场景 |
 |---|---|---:|---|---|
@@ -136,6 +146,14 @@ flowchart TD
 | 2026-11-18 下午 | `4e8d2f1` | **89.0%** | **PASS** | 补测 5 个用例 + 修复其他门禁项 |
 | 目标基线 | — | ≥ 85.0% | 舒适区 | 约定后续迭代不得低于此线 |
 
+<!-- IMG-EMBED -->
+**图 2 · xychart-beta**
+
+![图 2 · xychart-beta](../assets/tests-coverage-report--2.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 xychart-beta
     title "OrderHub 行覆盖率趋势 (Gate 8 门槛 80%)"
@@ -143,6 +161,8 @@ xychart-beta
     y-axis "Coverage %" 60 --> 100
     line [71.2, 74.8, 79.1, 76.4, 89.0]
 ```
+
+</details>
 
 > 趋势解读：11-18 上午因新增退款模块（分母从 700 增到 800）导致覆盖率回落至 76.4%，触发门禁拦截；下午针对性补测后跃升至 89.0%，越过舒适区。
 

@@ -8,6 +8,14 @@
 
 ## 1.1 系统上下文图（System Context）
 
+<!-- IMG-EMBED -->
+**图 1 · flowchart**
+
+![图 1 · flowchart](../assets/architecture-01-system-context--1.png)
+
+<details>
+<summary>查看 Mermaid 源码（可编辑）</summary>
+
 ```mermaid
 flowchart TB
     subgraph ACTORS["外部参与者"]
@@ -47,6 +55,8 @@ flowchart TB
     style ACTORS fill:#E6F1FB,stroke:#185FA5
     style TOOLS fill:#E1F5EE,stroke:#0F6E56
 ```
+
+</details>
 
 **读图要点：**
 - 体系的核心由三部分组成：**工作流引擎**（编排）+ **角色 Agent**（执行）+ **门禁保障**（验证）。
